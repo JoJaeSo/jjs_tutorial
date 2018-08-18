@@ -9,7 +9,8 @@
 4. git checkout -t origin/develop 을 하면 develop 브랜치를 가져 올수 있다.
 5. develop 브랜치로 checkout 했으면 여기서 개인 작업 브랜치를 따보자!
 6. git branch "개인브랜치명" 하고 checkout 하면 끝!
-7. 열심히 CRUD 작업을 합시다!
-8. git push origin "개인브랜치명" 하면 본인 브랜치내용이 올라갑니다.
+7. 각자 startapp으로 만드시고!
+8. 열심히 CRUD 작업을 합시다!
+9. git push origin "개인브랜치명" 하면 본인 브랜치내용이 올라갑니다.
 
 ! merge 하는 방법은 추후 올려두겠음.
