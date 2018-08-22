@@ -19,6 +19,7 @@ from django.urls import path, include
 from main_index import views as main_views
 
 urlpatterns = [
+    path('product/', include('product.urls')),
     path('admin/', admin.site.urls),
     path('', main_views.IndexView.as_view(), name="index"),
 ]
