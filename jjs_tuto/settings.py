@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'product',
+    'guestbook',
     'main_index',
     'django.contrib.admin',
     'django.contrib.auth',
