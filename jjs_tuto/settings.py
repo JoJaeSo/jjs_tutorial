@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'robbcrud',
     'jhblog',
     'main_index',
     'django.contrib.admin',
