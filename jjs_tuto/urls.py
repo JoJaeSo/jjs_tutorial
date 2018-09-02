@@ -24,5 +24,9 @@ urlpatterns = [
     path('', main_views.IndexView.as_view(), name="index"),
     path('jhblog/', include('jhblog.urls'), name="jhblog"),
     path('robbcrud/', include('robbcrud.urls'), name='robbcrud'),
+    path('ddo/', include('basic_crud.urls'), name="ddo"),
+    path('accounts/', include('django.contrib.auth.urls')),
+    path('accounts/signup', main_views.CreateUserView.as_view(), name='signup'),
+    path('accounts/login/done', main_views.ResisteredView.as_view(), name = 'create_user_done'),
 
 ]
