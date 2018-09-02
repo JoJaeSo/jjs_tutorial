@@ -17,9 +17,12 @@ from django.contrib import admin
 from django.urls import path, include
 
 from main_index import views as main_views
+from robbcrud.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', main_views.IndexView.as_view(), name="index"),
     path('jhblog/', include('jhblog.urls'), name="jhblog"),
+    path('robbcrud/', include('robbcrud.urls'), name='robbcrud'),
+
 ]
