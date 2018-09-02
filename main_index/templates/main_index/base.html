@@ -39,11 +39,19 @@
         <ul class="nav navbar-nav navbar-right">
           <li><a href="#">CEO 최지웅</a></li>
           <li><a href={% url "jhblog:index"  %}>CTO 권진희</a></li>
-          <li><a href="#">자문위원 김도영</a></li>
+          <li><a href={% url "ddo:example" %}>자문위원 김도영</a></li>
           <li><a href="#">알바 이희남</a></li>
           <!-- <li><a href="#"> <span class="glyphicon glyphicon-user"></span> Login</a></li>
           <li><a href="#">Logout</a></li> -->
+          {% if user.is_active %}
+          <li><a href="{%url 'login' %}"> <span class="glyphicon glyphicon-heart"></span> {{user.username}}</a></li>
+          <li><a href="{% url 'logout' %}">Logout</a></li>
+          {% else %}
+          <li><a href="{%url 'login' %}"> <span class="glyphicon glyphicon-user"></span> Login</a></li>
+          <li><a href="{% url 'admin:index' %}">Admin</a></li>
+          {% endif %}
         </ul>
+
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>
