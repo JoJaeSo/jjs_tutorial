@@ -3,4 +3,15 @@
 
 <h1>Hello jiny!!!</h1>
 
+{% if post_list %}
+    <ul>
+    {% for post in post_list %}
+        <li><a href="{% url 'jhblog:detail' post.id %}/"> {{post.title}}</a></li>
+        <!-- <li><a href="/jhblog/{{ post.id }}" >{{post.title}}</a></li> -->
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No post are available.</p>
+{% endif %}
+
 {% endblock %}
