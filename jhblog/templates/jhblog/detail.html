@@ -1,10 +1,15 @@
 {% extends 'base.html' %}
 {% block content %}
+<a class="btn btn-default" href="{% url 'jhblog:post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+
 <h1>{{ post.title }}</h1>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
 <ul>
     <li>{{ post.author }}</li>
     <li>{{ post.text }}</li>
     <li>{{ post.created_date }}</li>
     <li>{{ post.published_date }}</li>
 </ul>
+
 {% endblock %}

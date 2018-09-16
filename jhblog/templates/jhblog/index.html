@@ -1,12 +1,13 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1>Hello jiny!!!</h1>
+<a href="{% url 'jhblog:post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
 
+<h1>Hello jiny!!!</h1>
 {% if post_list %}
     <ul>
     {% for post in post_list %}
-        <li><a href="{% url 'jhblog:detail' post.id %}/"> {{post.title}}</a></li>
+        <li><a href="{% url 'jhblog:detail' post.pk %}"> {{post.title}}</a></li>
         <!-- <li><a href="/jhblog/{{ post.id }}" >{{post.title}}</a></li> -->
     {% endfor %}
     </ul>
